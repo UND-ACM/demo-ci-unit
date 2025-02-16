@@ -1,0 +1,1 @@
+from org.mycompany.unit.stat_analysis import StatAnalyzerTestCase

@@ -1,0 +1,1 @@
+from org.mycompany.abstract.analyzer import AbstractAnalyzer

@@ -1,0 +1,2 @@
+class ZeroDivisionException(Exception):
+    pass
