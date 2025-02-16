@@ -1,4 +1,5 @@
 import importlib
+import sys
 import unittest
 from os import listdir
 
@@ -27,7 +28,7 @@ def bootstrap():
             print("All tests passed. Good work!")
             exit(0)
         else:
-            exit(1)
+            sys.exit("One or more tests failed. Please review logs and fix it!")
 
 
 if __name__ == '__main__':
