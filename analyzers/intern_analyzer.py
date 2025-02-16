@@ -1,7 +1,11 @@
 from org.mycompany.abstract import AbstractAnalyzer
+from org.mycompany.exception import ZeroDivisionException
 
 class StatAnalyzer(AbstractAnalyzer):
     def mean(self, values: list[int]) -> float:
+        if len(values) == 0:
+            raise ZeroDivisionException
+
         # Simply return the mean
         return sum(values) / len(values)
 
