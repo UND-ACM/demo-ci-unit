@@ -1,7 +1,9 @@
-name: Analyzer Unit Tests
+name: analyzer-unit
 on:
   pull_request:
     branches: [ "main" ]
+    paths:
+      - /analyzers/*.py
 
 permissions:
   contents: read
