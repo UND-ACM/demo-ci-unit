@@ -1,15 +1,13 @@
-name: analyzer-unit
+name: unit
 on:
   pull_request:
     branches: [ "main" ]
-    paths:
-      - /analyzers/*.py
 
 permissions:
   contents: read
 
 jobs:
-  run:
+  passes-unit:
     runs-on: ubuntu-latest
 
     steps:
