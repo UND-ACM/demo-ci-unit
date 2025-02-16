@@ -1,4 +1,5 @@
 import importlib
+import sys
 import unittest
 from os import listdir
 
@@ -21,7 +22,13 @@ def bootstrap():
 
         # Run unit tests on class
         runner = unittest.TextTestRunner()
-        runner.run(suite)
+        result = runner.run(suite)
+
+        if result.wasSuccessful():
+            print("All tests passed. Good work!")
+            exit(0)
+        else:
+            sys.exit("One or more tests failed. Please review logs and fix it!")
 
 
 if __name__ == '__main__':

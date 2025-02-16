@@ -1,7 +1,9 @@
-name: workflow.yml
+name: analyzer-unit
 on:
   pull_request:
     branches: [ "main" ]
+    paths:
+      - /analyzers/*.py
 
 permissions:
   contents: read
@@ -16,5 +18,5 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: "3.13"
-    - name: Execute Unit Tests for /analyzers
-      run: python3 ci.py
+    - name: Execute
+      run: python3 -m org.mycompany.ci
