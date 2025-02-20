@@ -3,7 +3,7 @@ from org.mycompany.abstract import AbstractAnalyzer
 
 class StatAnalyzer(AbstractAnalyzer):
     def mean(self, values: list[int]) -> float:
-        raise NotImplementedError
+        return float(sum(values) / len(values))
 
     def median(self, values: list[int]) -> float:
         # Avoid zero-length lists
