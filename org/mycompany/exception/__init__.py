@@ -1,1 +1,1 @@
-from org.mycompany.exception.zero_division_exception import ZeroDivisionException
+from org.mycompany.exception.calculation_exception import CalculationException
