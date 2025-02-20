@@ -4,12 +4,12 @@ from org.mycompany.exception import CalculationException
 
 class StatAnalyzer(AbstractAnalyzer):
     def mean(self, values: list[int]) -> float:
-        return float(sum(values) / len(values))
-
-    def median(self, values: list[int]) -> float:
         if len(values) == 0:
             raise CalculationException
 
+        return float(sum(values) / len(values))
+
+    def median(self, values: list[int]) -> float:
         # Avoid zero-length lists
         if len(values) == 0:
             return 0.0
