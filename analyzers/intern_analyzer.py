@@ -1,9 +1,13 @@
 from org.mycompany.abstract import AbstractAnalyzer
+from org.mycompany.exception import CalculationException
 
 
 class StatAnalyzer(AbstractAnalyzer):
     def mean(self, values: list[int]) -> float:
-        raise NotImplementedError
+        if len(values) == 0:
+            raise CalculationException
+
+        return float(sum(values) / len(values))
 
     def median(self, values: list[int]) -> float:
         # Avoid zero-length lists
